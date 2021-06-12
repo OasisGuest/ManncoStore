@@ -1,0 +1,15 @@
+{
+	"manifest_version": 2,
+	"name": "ManncoStore",
+	"version": "0.1",
+	"icons": {"128": "crescent128.png"},
+	"content_scripts": [
+		{
+			"matches": ["https://mannco.store/item*"],
+			"js": ["main.js"]
+		}
+	],
+	"web_accessible_resources": [
+		"effects.json"
+	]
+}
