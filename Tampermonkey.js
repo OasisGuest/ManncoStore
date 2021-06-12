@@ -26,9 +26,12 @@ if (itemName.includes("Uncraftable")) {
 }
 if (quality == "Unusual") {
 	unuEffect = document.getElementsByClassName("card-item")[0].querySelector(".item-name"
-		).textContent.split("★ ")[1].split("  Unusual")[0];
+		).textContent.split("★ ")[1].split("Strange")[0].split("Unusual")[0].trim();
 } if (itemName.includes("Strange") && quality != "Strange") {
 	quality = "Strange " + quality;
+} if (itemName.includes("Strange Part")) {
+	quality = "Unique";
+	fixedName = "Strange " + fixedName;
 }
 
 var effects = {
