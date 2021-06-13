@@ -47,11 +47,22 @@ function openURL(name, qName, qID) {
 
 function begin() {
 	var div = document.getElementById("page-sidebar");
-	var button = document.createElement("button");div.prepend(button);
-	button.style = `position:absolute;margin-top:-25px;margin-left:70px;
+	var btnStats = document.createElement("button");div.prepend(btnStats);
+	btnStats.style = `position:absolute;margin-top:-25px;margin-left:70px;
 	color:white;background-color:#42445b;border:none;border-radius:5px`;
-	button.innerHTML = "Backpack.tf Stats";
-	button.onclick = () => {openURL(fixedName, quality, qualityID)}
+	btnStats.innerHTML = "Backpack.tf Stats";
+	btnStats.onclick = () => {openURL("bptf", fixedName, quality, qualityID)}
+
+	if (window.location.href.split("/")[5]) {
+		let link = window.location.href.replace(window.location.href.split("/")[5], "");
+		btnStats.style.marginLeft = "30px";
+		var btnSPage = document.createElement("button");
+		div.insertBefore(btnSPage, btnStats.nextSibling);
+		btnSPage.style = `position:absolute;margin-top:-25px;margin-left:170px;
+		color:white;background-color:#42445b;border:none;border-radius:5px`;
+		btnSPage.innerHTML = "Store Page";
+		btnSPage.onclick = () => {openURL("store_page", link)}
+	}
 }
 
 setTimeout(() => {
