@@ -1,6 +1,10 @@
 # ManncoStore
 Just a helpful extension for Mannco.store
 
+Adds a quick button to the backpack.tf stats of the item
+
+![button](https://user-images.githubusercontent.com/85738001/121816173-c4881700-cc82-11eb-80b4-fc28dadfeeea.png)
+
 *only works for Google Chrome
 ## Installation _(as a Chrome Extension)_
 1) Download [chrome-ext](./chrome-ext) files.
